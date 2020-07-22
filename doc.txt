@@ -1,0 +1,613 @@
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git config --global user.name abdul850
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git config --global user.email kabdulhafiz98@gmail.com
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git config --global user.email
+kabdulhafiz98@gmail.com
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git config --global user.name
+abdul850
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ code.
+bash: code.: command not found
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ code .
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git init
+Initialized empty Git repository in C:/Users/ABDUL HAFIZ KHAN/Desng/.git/
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls -art
+../  .vscode/  ./  .git/
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls -lart
+total 20
+drwxr-xr-x 1 ABDUL HAFIZ KHAN 197121 0 Jul 22 16:30 ../
+drwxr-xr-x 1 ABDUL HAFIZ KHAN 197121 0 Jul 22 16:33 .vscode/
+drwxr-xr-x 1 ABDUL HAFIZ KHAN 197121 0 Jul 22 16:34 ./
+drwxr-xr-x 1 ABDUL HAFIZ KHAN 197121 0 Jul 22 16:34 .git/
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+        index.html
+
+nothing added to commit but untracked files present (use "git add
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add index.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit
+[master (root-commit) a670d89] initial commit
+ 1 file changed, 7 insertions(+)
+ create mode 100644 index.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+nothing added to commit but untracked files present (use "git add
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ touch about.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ touch contact.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+        about.html
+        contact.html
+
+nothing added to commit but untracked files present (use "git add
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .vscode/settings.json
+        new file:   about.html
+        new file:   contact.html
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .vscode/settings.json
+        new file:   about.html
+        new file:   contact.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index copy.html
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .vscode/settings.json
+        new file:   about.html
+        new file:   contact.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working dire
+        modified:   contact.html
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .vscode/settings.json
+        new file:   about.html
+        new file:   contact.html
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -m "added some html files"
+[master 539add3] added some html files
+ 3 files changed, 10 insertions(+)
+ create mode 100644 .vscode/settings.json
+ create mode 100644 about.html
+ create mode 100644 contact.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout contact.html
+Updated 1 path from the index
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout -f
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git log
+commit 539add33d188d06fc87307342646105c48185f12 (HEAD -> master)
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 16:47:30 2020 +0530
+
+    added some html files
+
+commit a670d89b8b85139e133be7ba2904635018959cda
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 16:40:43 2020 +0530
+
+    initial commit
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git log -2
+commit 539add33d188d06fc87307342646105c48185f12 (HEAD -> master)
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 16:47:30 2020 +0530
+
+    added some html files
+
+commit a670d89b8b85139e133be7ba2904635018959cda
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 16:40:43 2020 +0530
+
+    initial commit
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git log -p -2
+commit 539add33d188d06fc87307342646105c48185f12 (HEAD -> master)
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 16:47:30 2020 +0530
+
+    added some html files
+
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+new file mode 100644
+index 0000000..3b66410
+--- /dev/null
++++ b/.vscode/settings.json
+@@ -0,0 +1,3 @@
++{
++    "git.ignoreLimitWarning": true
++}
+\ No newline at end of file
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..e69de29
+diff --git a/contact.html b/contact.html
+new file mode 100644
+index 0000000..cfdecfe
+--- /dev/null
++++ b/contact.html
+@@ -0,0 +1,7 @@
++<!DOCTYPE html>
++<html>
++    <head></head>
++    <body>
++        <h1>welcome to git</h1>
++    </body>
++</html>
+\ No newline at end of file
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ q
+bash: q: command not found
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git diff
+diff --git a/contact.html b/contact.html
+index cfdecfe..f9d4fb1 100644
+--- a/contact.html
++++ b/contact.html
+@@ -3,5 +3,5 @@
+     <head></head>
+     <body>
+         <h1>welcome to git</h1>
+-    </body>
++    </body arsh>
+ </html>
+\ No newline at end of file
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git diff
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   contact.html
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git diff --stage
+error: invalid option: --stage
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git diff --staged
+diff --git a/contact.html b/contact.html
+index cfdecfe..f9d4fb1 100644
+--- a/contact.html
++++ b/contact.html
+@@ -3,5 +3,5 @@
+     <head></head>
+     <body>
+         <h1>welcome to git</h1>
+-    </body>
++    </body arsh>
+ </html>
+\ No newline at end of file
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout -f
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m "skipped stage area and fixed"
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git log
+commit 539add33d188d06fc87307342646105c48185f12 (HEAD -> master)
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 16:47:30 2020 +0530
+
+    added some html files
+
+commit a670d89b8b85139e133be7ba2904635018959cda
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 16:40:43 2020 +0530
+
+    initial commit
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls
+about.html  contact.html  index.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ touch waste.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m
+error: switch `m' requires a value
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m"adding waste"
+[master 857c244] adding waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 waste.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls
+about.html  contact.html  index.html  waste.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git rm --cached
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git rm --cached waste.html
+rm 'waste.html'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls
+about.html  contact.html  index.html  waste.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git rm waste.html
+rm 'waste.html'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    waste.html
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls
+about.html  contact.html  index.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m"removing waste"
+[master 972d8f7] removing waste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 waste.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git log -p -2
+commit 972d8f7ce5772460a30f09b3b0b8cc9ee8b5082b (HEAD -> master)
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 17:04:25 2020 +0530
+
+    removing waste
+
+diff --git a/waste.html b/waste.html
+deleted file mode 100644
+index e69de29..0000000
+
+commit 857c244b2cf9ad24b28399edb626549b3b97197b
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 17:01:52 2020 +0530
+
+    adding waste
+
+diff --git a/waste.html b/waste.html
+new file mode 100644
+index 0000000..e69de29
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status -s
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status -s
+ M contact.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status -s
+M  contact.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status -s
+MM contact.html
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status -s
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ touch .gitignore
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout -f
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ touch mylogs.log
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls
+about.html  contact.html  index.html  mylogs.log
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m"ignore files"
+[master bd8c2df] ignore files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git rm --cached /mylog.log
+fatal: C:/Program Files/Git/mylog.log: 'C:/Program Files/Git/mylog.log' is outside repository
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git rm --cached mylog.log
+fatal: pathspec 'mylog.log' did not match any files
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git rm --cached mylogs.log
+fatal: pathspec 'mylogs.log' did not match any files
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls
+about.html  contact.html  index.html  mylogs.log
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git rm --cached mylogs.log
+fatal: pathspec 'mylogs.log' did not match any files
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitignore/
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ ls
+about.html  contact.html  gitignore/  index.html  mylogs.log
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m"commit"
+[master d5d2d49] commit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$
