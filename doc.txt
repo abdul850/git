@@ -819,3 +819,62 @@ nothing to commit, working tree clean
 
 ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
 $
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git remote add origin https://github.com/abdul850/git.git
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git remote
+origin
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git remote -v
+origin  https://github.com/abdul850/git.git (fetch)
+origin  https://github.com/abdul850/git.git (push)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git push origin master
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (23/23), 3.91 KiB | 235.00 KiB/s, done.
+Total 23 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/abdul850/git.git
+ * [new branch]      master -> master
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout feature2
+Switched to branch 'feature2'
+M       doc.txt
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git commit -a -m"commit new file"
+[feature2 c8bfa99] commit new file
+ 1 file changed, 208 insertions(+)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git status
+On branch feature2
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git push -u origin feature2
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.38 KiB | 283.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature2' on GitHub by visiting:
+remote:      https://github.com/abdul850/git/pull/new/feature2
+remote:
+To https://github.com/abdul850/git.git
+ * [new branch]      feature2 -> feature2
+Branch 'feature2' set up to track remote branch 'feature2' from 'origin'.
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git
+
