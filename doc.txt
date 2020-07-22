@@ -611,3 +611,211 @@ nothing to commit, working tree clean
 
 ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
 $
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ touch doc.txt
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        doc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m"commit"
+On branch master
+Untracked files:
+        doc.txt
+
+nothing added to commit but untracked files present
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git commit -a -m"commit"
+[master aa0a425] commit
+ 1 file changed, 613 insertions(+)
+ create mode 100644 doc.txt
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git branch feature1
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git branch
+  feature1
+* master
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature1)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature1)
+$ git status
+On branch feature1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature1)
+$ git commit -a -m"commit new feature"
+[feature1 34e4cd1] commit new feature
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git log -p -2
+commit aa0a42553716bc26db7721968151ed525ac6e8e5 (HEAD -> master)
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 17:28:16 2020 +0530
+
+    commit
+
+diff --git a/doc.txt b/doc.txt
+new file mode 100644
+index 0000000..3fe5bd8
+--- /dev/null
++++ b/doc.txt
+@@ -0,0 +1,613 @@
++
++ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
++$ git config --global user.name abdul850
++
++ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
++$ git config --global user.email kabdulhafiz98@gmail.com
++
++ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
++$ git config --global user.email
++kabdulhafiz98@gmail.com
++
++ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
++$ git config --global user.name
++abdul850
++
++ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
++$ code.
++bash: code.: command not found
++
++ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
++$ code .
++
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git merger feature1
+git: 'merger' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git merge feature1
+Updating aa0a425..34e4cd1
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git log -p -2
+commit 34e4cd1fbdd3725092db30767ca9008cd0b56794 (HEAD -> master, feature1)
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 17:34:59 2020 +0530
+
+    commit new feature
+
+diff --git a/index.html b/index.html
+index cfdecfe..2d6460f 100644
+--- a/index.html
++++ b/index.html
+@@ -2,6 +2,6 @@
+ <html>
+     <head></head>
+     <body>
+-        <h1>welcome to git</h1>
++        <h1>welcome to feature</h1>
+     </body>
+ </html>
+\ No newline at end of file
+
+commit aa0a42553716bc26db7721968151ed525ac6e8e5
+Author: abdul850 <kabdulhafiz98@gmail.com>
+Date:   Wed Jul 22 17:28:16 2020 +0530
+
+    commit
+
+diff --git a/doc.txt b/doc.txt
+new file mode 100644
+index 0000000..3fe5bd8
+--- /dev/null
++++ b/doc.txt
+@@ -0,0 +1,613 @@
++
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout -b feature2
+Switched to a new branch 'feature2'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git branch
+  feature1
+* feature2
+  master
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ touch new.txt
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git checkout master
+Switched to branch 'master'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git checkout feature2
+Switched to branch 'feature2'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git add -A
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git commit -a -m"commit new file"
+[feature2 dd5ce73] commit new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (feature2)
+$ git checkout master
+Switched to branch 'master'
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ABDUL HAFIZ KHAN@Abdul MINGW64 ~/Desktop/git learning (master)
+$
